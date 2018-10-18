@@ -4,6 +4,7 @@ The code implements viscosity for non-Newtonian fluids in Basilisk C (http://bas
 In this repository, the second invariant of Velocity vector gradient is calculated at the cell center (to get scalar muTemp[] at the cell center). The coefficient of viscosity is calculated using (muTemp[] + muTemp[-1,0])/2.;
 The relevant code snippet is:
 
+```
 event properties(i++) {
   scalar muTemp[];
   /*
@@ -46,4 +47,4 @@ event properties(i++) {
     }
     boundary ((scalar *){muv});
 }
-
+```
